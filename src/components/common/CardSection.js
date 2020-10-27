@@ -1,16 +1,16 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 
 const CardSection = (props) => {
     return (
-        <View style={styles.sectionContainer}>
+        <View style={styles.containerStyle}>
             {props.children}
         </View>
     );
-}
+};
 
-const styles = StyleSheet.create({
-    sectionContainer: {
+const styles = {
+    containerStyle: {
         borderBottomWidth: 1,
         padding: 5,
         backgroundColor: '#fff',
@@ -19,6 +19,6 @@ const styles = StyleSheet.create({
         borderColor: '#ddd',
         position: 'relative'
     }
-})
+};
 
-export default CardSection;
+export { CardSection };
