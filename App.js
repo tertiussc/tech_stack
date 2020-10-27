@@ -1,6 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import reducers from './src/reducers'
@@ -13,6 +12,7 @@ export default function App() {
     <Provider store={createStore(reducers)}>
       <View>
         <Header headerText="Tech Stack" />
+
       </View>
     </Provider>
   );
