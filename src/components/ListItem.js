@@ -10,7 +10,9 @@ class ListItem extends Component {
 
         if (library.item.id === selectedLibraryId) {
             return (
-                <Text>{library.item.description}</Text>
+                <CardSection>
+                    <Text>{library.item.description}</Text>
+                </CardSection>
             )
         }
     }
