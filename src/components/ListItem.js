@@ -6,9 +6,8 @@ import * as actions from '../actions'
 
 class ListItem extends Component {
     renderDecription() {
-        const { library, selectedLibraryId } = this.props
-
-        if (library.item.id === selectedLibraryId) {
+        const { library, expanded } = this.props
+        if (expanded) {
             return (
                 <CardSection>
                     <Text>{library.item.description}</Text>
@@ -36,10 +35,10 @@ class ListItem extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        selectedLibraryId: state.selectedLibraryId
-    }
+const mapStateToProps = (state, ownProps) => {
+    const expanded = state.selectedLibraryId === ownProps.library.item.id
+
+    return { expanded }
 }
 
 const styles = StyleSheet.create({
